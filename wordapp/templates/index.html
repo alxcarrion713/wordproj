@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="" href="{% static 'style.css' %}">
+</head>
+<style>
+    .box1{
+        border: solid black 1px;
+        vertical-align: middle;
+        text-align: center;
+        width: 300px;
+        height: 100px;
+        margin-left: 500px;
+        background-color: cadetblue;
+        color: white;
+        border-radius: 10px;
+
+    }
+    h1{
+        margin-left: 400px;
+        color: violet;
+    }
+
+    button{
+        background-color: white;
+        border-radius: 10px;
+    }
+
+
+</style>
+
+
+<body>
+    
+    <h1>Random Word: {{randwordContext}}</h1>
+    <div class="box1">
+    <p>Attempt # {{request.session.counter}}</p>
+    <a href=""><button>Generate</button></a>
+    <a href="/reset"><button>Reset</button></a>
+</div>
+</body>
+</html>
